@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Declaração para Você</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Para o Amor da Minha Vida</h1>
+    
+    <!-- Imagem -->
+    <img src="https://i.postimg.cc/3r14k3ZL/minha-foto.jpg" alt="Foto nossa" class="photo">
+
+    <!-- Texto romântico -->
+    <p class="romantic-text">
+      "Desde o primeiro dia, você trouxe paz e alegria para a minha vida. Estamos juntos há 3 meses, e eu só tenho a agradecer por cada momento ao seu lado. Te amo mais do que palavras podem expressar."
+    </p>
+    <p class="time-together">Juntos desde: 25/08</p>
+
+    <!-- Pergunta com botões de opção -->
+    <div class="question">
+      <p>Quer voltar comigo?</p>
+      <label class="button-label">
+        <input type="radio" name="voltar" value="sim" class="button"> Sim
+      </label>
+      <label class="button-label" id="nao-label">
+        <input type="radio" name="voltar" value="nao" class="button" id="nao"> Não
+      </label>
+    </div>
+  </div>
+
+  <script>
+    const naoButton = document.getElementById('nao');
+    const naoLabel = document.getElementById('nao-label');
+
+    // Função para trocar "Não" para "Sim" quando o botão "Não" for selecionado
+    naoButton.addEventListener('change', () => {
+      if (naoButton.checked) {
+        naoLabel.textContent = "Sim";  // Troca "Não" para "Sim"
+      }
+    });
+  </script>
+</body>
+</html>
